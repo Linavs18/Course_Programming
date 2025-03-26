@@ -72,22 +72,43 @@
             border: 1px solid #dadce0;
         }
 
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+        
+        .header a {
+            margin-left: 15px;
+            color: #201f1f;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+        
     </style>
 </head>
 <body>
+    <div class="header">
+        <a href="index.html">Búsqueda</a>
+    </div>
+    
     <div class="search-container">
         <div class="google-logo">
             <h1>Google</h1>
         </div>
 
         <form class="search-form" action="https://www.google.com/search" method="GET">
+            <input type="hidden" name="tbm" value="isch">
              <div class="search-bar-container">  
                 <input type="text" name="q" class="search-bar " placeholder="Buscar en Google">
             </div>
 
             <div class="button">
-                <button type="submit" class="search-button">Buscar con Google</button>
-                <button type="submit" name="button2" value="I'm Feeling Lucky" class="search-button">Me siento afortunado</button>
+                <button type="submit" class="search-button">Buscar imágenes</button>
             </div>
         </form>
     <div>

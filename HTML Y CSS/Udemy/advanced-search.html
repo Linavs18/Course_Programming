@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda Avanzada de Google</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 13px;
+            color: red;
+        }
+        
+        .header-links {
+            display: flex;
+        }
+        
+        .header-links a {
+            margin-left: 15px;
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .advanced-search-container {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .advanced-search-title {
+            color:red;
+            font-size: 23px;
+            margin: 25px 0;
+        }
+        
+        .line-separator {
+            border-bottom: 1px solid #ebebeb;
+            margin: 25px 0;
+        }
+          
+          
+        .form-group {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .form-group-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+              
+        .form-group label {
+            font-size: 14px;
+        }
+        
+        .form-input {
+            width: 95%;
+            padding: 8px;
+            border: 0px solid #d9d9d9;
+            border-radius: 1px;
+            font-size: 13px;
+        }
+        .form-input:hover {
+            background-color: #d6d5d5;
+        }
+
+        .button-container {
+         display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        }
+     
+        .advanced-search-button {
+            background-color: #4d90fe;
+            border: 1px solid #3079ed;
+            border-radius: 2px;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        
+        .advanced-search-button:hover {
+            background-color: #357ae8;
+            border-color: #2f5bb7;
+        }
+        
+        .to-know {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>Google</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html">Búsqueda</a>
+            <a href="search-images.html">Imágenes</a>
+        </div>
+    </div>
+    
+    <div class="advanced-search-container">
+        <div class="advanced-search-title">Búsqueda avanzada</div>
+        <div class="line-separator"></div>
+        
+        <form action="https://www.google.com/search" method="GET">
+            <div class="form-group-title">Encuentra páginas con...</div>
+            
+            <div class="form-group">
+                <label for="all-words">todas estas palabras:</label>
+                <input type="text" id="all-words" name="as_q" class="form-input">
+                <div class="to-know">Ingresa las palabras importantes: Terrier ratonero tricolor</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="exact-phrase">esta palabra o frase exacta:</label>
+                <input type="text" id="exact-phrase" name="as_epq" class="form-input">
+                <div class="to-know">Ingresa las palabras exactas entre comillas: "Terrier ratonero" .
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="any-words">cualquiera de estas palabras:</label>
+                <input type="text" id="any-words" name="as_oq" class="form-input">
+                <div class="to-know">Ingresa OR entre las palabras que desees: En miniatura OR estándar .</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="none-words">ninguna de estas palabras:</label>
+                <input type="text" id="none-words" name="as_eq" class="form-input">
+                <div class="to-know">Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -"Jack Russell" .</div>
+            </div>
+            
+            <div class="button-container">
+                <button type="submit" class="advanced-search-button">Búsqueda avanzada</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
