@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda Avanzada de Google</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>Google</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html">Búsqueda</a>
+            <a href="search-images.html">Imágenes</a>
+        </div>
+    </div>
+    
+    <div class="advanced-search-container">
+        <div class="advanced-search-title">Búsqueda avanzada</div>
+        <div class="line-separator"></div>
+        
+        <form action="https://www.google.com/search" method="GET">
+            <div class="form-group-title">Encuentra páginas con...</div>
+            
+            <div class="form-group">
+                <label for="all-words">todas estas palabras:</label>
+                <input type="text" id="all-words" name="as_q" class="form-input">
+                <div class="to-know">Ingresa las palabras importantes: Terrier ratonero tricolor</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="exact-phrase">esta palabra o frase exacta:</label>
+                <input type="text" id="exact-phrase" name="as_epq" class="form-input">
+                <div class="to-know">Ingresa las palabras exactas entre comillas: "Terrier ratonero" .
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="any-words">cualquiera de estas palabras:</label>
+                <input type="text" id="any-words" name="as_oq" class="form-input">
+                <div class="to-know">Ingresa OR entre las palabras que desees: En miniatura OR estándar .</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="none-words">ninguna de estas palabras:</label>
+                <input type="text" id="none-words" name="as_eq" class="form-input">
+                <div class="to-know">Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -"Jack Russell" .</div>
+            </div>
+            
+            <div class="button-container">
+                <button type="submit" class="advanced-search-button">Búsqueda avanzada</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
